@@ -2,7 +2,7 @@ using LibraryManagement.Api.Models;
 
 namespace LibraryManagement.Api.Repositories;
 
-public interface IBorrowRepository
+public interface IBorrowRecordRepository
 {
     IEnumerable<BorrowRecord> GetAll();
     BorrowRecord? GetById(Guid id);

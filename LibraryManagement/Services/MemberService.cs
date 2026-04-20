@@ -19,12 +19,9 @@ public class MemberService : IMemberService
             .Select(m => new MemberResponse
             {
                 Id = m.Id,
-                FirstName = m.FirstName,
-                LastName = m.LastName,
+                FullName = m.FullName,
                 Email = m.Email,
-                PhoneNumber = m.PhoneNumber,
-                CreatedAt = m.CreatedAt,
-                Status = m.Status
+                MembershipDate = m.MembershipDate
             });
     }
 
@@ -37,12 +34,9 @@ public class MemberService : IMemberService
         return new MemberResponse
         {
             Id = member.Id,
-            FirstName = member.FirstName,
-            LastName = member.LastName,
+            FullName = member.FullName,
             Email = member.Email,
-            PhoneNumber = member.PhoneNumber,
-            CreatedAt = member.CreatedAt,
-            Status = member.Status
+            MembershipDate = member.MembershipDate
         };
     }
 
@@ -51,12 +45,9 @@ public class MemberService : IMemberService
         var member = new Member
         {
             Id = Guid.NewGuid(),
-            FirstName = request.FirstName,
-            LastName = request.LastName,
+            FullName = request.FullName,
             Email = request.Email,
-            PhoneNumber = request.PhoneNumber,
-            CreatedAt = DateTime.UtcNow,
-            Status = "Active"
+            MembershipDate = DateTime.UtcNow
         };
 
         var created = _memberRepository.Add(member);
@@ -64,12 +55,9 @@ public class MemberService : IMemberService
         return new MemberResponse
         {
             Id = created.Id,
-            FirstName = created.FirstName,
-            LastName = created.LastName,
+            FullName = created.FullName,
             Email = created.Email,
-            PhoneNumber = created.PhoneNumber,
-            CreatedAt = created.CreatedAt,
-            Status = created.Status
+            MembershipDate = created.MembershipDate
         };
     }
 }

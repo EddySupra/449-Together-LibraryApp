@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260420002607_InitialCreate")]
+    [Migration("20260420044611_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -30,23 +30,19 @@ namespace LibraryManagement.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("CopiesAvailable")
+                    b.Property<int>("AvailableCopies")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("ISBN")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("PublishedAt")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("TotalCopies")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -62,16 +58,13 @@ namespace LibraryManagement.Migrations
                     b.Property<Guid>("BookId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("BorrowedAt")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DueAt")
+                    b.Property<DateTime>("BorrowDate")
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("MemberId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("ReturnedAt")
+                    b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
@@ -93,27 +86,15 @@ namespace LibraryManagement.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<DateTime>("MembershipDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

@@ -18,7 +18,7 @@ builder.Services.AddScoped<LibraryManagement.Api.Services.IBookService, LibraryM
 builder.Services.AddScoped<LibraryManagement.Api.Repositories.IMemberRepository, LibraryManagement.Api.Repositories.MemberRepository>();
 builder.Services.AddScoped<LibraryManagement.Api.Services.IMemberService, LibraryManagement.Api.Services.MemberService>();
 
-builder.Services.AddScoped<LibraryManagement.Api.Repositories.IBorrowRepository, LibraryManagement.Api.Repositories.BorrowRepository>();
+builder.Services.AddScoped<LibraryManagement.Api.Repositories.IBorrowRecordRepository, LibraryManagement.Api.Repositories.BorrowRecordRepository>();
 builder.Services.AddScoped<LibraryManagement.Api.Services.IBorrowRecordService, LibraryManagement.Api.Services.BorrowRecordService>();
 
 

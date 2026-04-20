@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibraryManagement.Api.Repositories;
 
-public class BorrowRepository : IBorrowRepository
+public class BorrowRecordRepository : IBorrowRecordRepository
 {
     private readonly ApplicationDbContext _context;
 
-    public BorrowRepository(ApplicationDbContext context)
+    public BorrowRecordRepository(ApplicationDbContext context)
     {
         _context = context;
     }

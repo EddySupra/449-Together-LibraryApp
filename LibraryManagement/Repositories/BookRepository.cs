@@ -36,6 +36,12 @@ public class BookRepository : IBookRepository
         return book;
     }
 
+    public void Delete(Book book)
+    {
+        _context.Books.Remove(book);
+        _context.SaveChanges();
+    }
+
     public bool ExistsByIsbn(string isbn)
     {
         return _context.Books.Any(b => b.ISBN == isbn);

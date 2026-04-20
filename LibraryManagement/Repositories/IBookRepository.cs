@@ -8,5 +8,6 @@ public interface IBookRepository
     Book? GetById(Guid id);
     Book Add(Book book);
     Book Update(Book book);
+    void Delete(Book book);
     bool ExistsByIsbn(string isbn);
 }

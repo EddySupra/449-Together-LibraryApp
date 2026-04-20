@@ -14,7 +14,7 @@ public class MemberRepository : IMemberRepository
 
     public IEnumerable<Member> GetAll()
     {
-        return _context.Members.AsQueryable().ToList();
+        return _context.Members.ToList();
     }
 
     public Member? GetById(Guid id)
