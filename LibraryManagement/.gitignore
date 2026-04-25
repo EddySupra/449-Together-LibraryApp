@@ -1,0 +1,52 @@
+# Ignore build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+artifacts/
+
+# Local environment and user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.code-workspace
+
+# Database files generated during development
+librarymanagement.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and secret files
+.env
+*.env.*
+
+# NuGet and package restore
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Tool and test output
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+BenchmarkDotNet.Artifacts/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Generated files from tools
+Generated Files/
+
+# OS files
+.DS_Store
+
+# Optional editor caches
+.idea/
+*.sln.iml
